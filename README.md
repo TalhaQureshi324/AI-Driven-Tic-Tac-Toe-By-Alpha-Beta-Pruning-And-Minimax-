@@ -1,9 +1,9 @@
-# 🧠 AI Driven Tic Tac Toe By Alpha Beta Pruning & Minimax
+# AI Driven Tic Tac Toe By Alpha Beta Pruning & Minimax
 
 **Implemented by Muhammad Talha Qureshi**
 
 This repository contains three Artificial Intelligence tasks implemented
-in Python using Pygame and Genetic Algorithms concepts.\
+in Python using Pygame and Genetic Algorithms concepts.
 Each task demonstrates a core AI decision-making technique: **Minimax**,
 **Alpha-Beta Pruning**, and **Genetic Algorithms**.
 
@@ -61,11 +61,11 @@ You will see a menu like this:
     3. Genetic Algorithm for String Matching (Task 3)
     4. Exit
 
-Choose any option (1--3) to run that specific task.
+Choose any option (1-3) to run that specific task.
 
 ------------------------------------------------------------------------
 
-## 🧠 Task 1 --- Tic-Tac-Toe using Minimax
+## 🧠 Task 1 - Tic-Tac-Toe using Minimax
 
 ### 🧩 Concept
 
@@ -88,22 +88,22 @@ Player (X) plays optimally to minimize AI's score.
 
 ### 🔄 Example Workflow
 
-1.  Player places X.\
-2.  AI simulates all possible responses for O.\
+1.  Player places X.
+2.  AI simulates all possible responses for O.
 3.  For each possible O, AI also predicts how the player might respond
-    next.\
+    next.
 4.  This recursion continues until all possible game endings are
-    evaluated.\
+    evaluated.
 5.  The best move (leading to the best final score) is selected.
 
 ------------------------------------------------------------------------
 
-## ⚡ Task 2 --- Tic-Tac-Toe using Alpha-Beta Pruning
+## ⚡ Task 2 - Tic-Tac-Toe using Alpha-Beta Pruning
 
 ### 🧩 Concept
 
 This task extends Minimax with **Alpha-Beta Pruning**, a technique that
-cuts off unnecessary branches of the game tree.\
+cuts off unnecessary branches of the game tree.
 This makes the decision-making faster and more efficient while
 guaranteeing the same result as plain Minimax.
 
@@ -111,9 +111,9 @@ guaranteeing the same result as plain Minimax.
 
 At the end of the game, the program prints:
 
--   AI type used\
--   Nodes explored\
--   Maximum recursion depth\
+-   AI type used
+-   Nodes explored
+-   Maximum recursion depth
 -   Execution time
 
 **Example Output:**
@@ -126,24 +126,24 @@ At the end of the game, the program prints:
 
 ------------------------------------------------------------------------
 
-## 🧬 Task 3 --- Genetic Algorithm for String Matching
+## 🧬 Task 3 - Genetic Algorithm for String Matching
 
 ### 🧩 Concept
 
 A **Genetic Algorithm (GA)** mimics natural selection to solve
-optimization problems.\
+optimization problems.
 In this case, the goal is to evolve random strings until they match a
 target word (e.g., `HELLOGA123`).
 
 ### ⚙️ Workflow
 
-1.  **Initialization:** Create a random population of strings.\
+1.  **Initialization:** Create a random population of strings.
 2.  **Fitness Calculation:** Compare each string with the target and
-    count matching characters.\
-3.  **Selection:** Pick parent strings using tournament selection.\
+    count matching characters.
+3.  **Selection:** Pick parent strings using tournament selection.
 4.  **Crossover:** Mix genes (characters) between parents to create
-    offspring.\
-5.  **Mutation:** Randomly alter some characters to maintain diversity.\
+    offspring.
+5.  **Mutation:** Randomly alter some characters to maintain diversity.
 6.  **Repeat:** Over generations, the population improves until a
     near-perfect or perfect match appears.
 
@@ -177,19 +177,19 @@ Displays a selection menu to run any of the three AI programs.
 
 ### Task 1 (Minimax)
 
--   Explores all possible game states recursively.\
--   Evaluates each outcome and backpropagates scores.\
+-   Explores all possible game states recursively.
+-   Evaluates each outcome and backpropagates scores.
 -   Selects the move that maximizes AI's winning chance.
 
 ### Task 2 (Alpha-Beta)
 
--   Improves Minimax by skipping irrelevant branches.\
+-   Improves Minimax by skipping irrelevant branches.
 -   Displays node count, recursion depth, and time for analysis.
 
 ### Task 3 (Genetic Algorithm)
 
 -   Evolves random strings toward the target using crossover and
-    mutation.\
+    mutation.
 -   Prints fitness evolution across generations.
 
 ------------------------------------------------------------------------
@@ -225,15 +225,15 @@ algorithms using:
 -   **Genetic Algorithms for stochastic optimization.**
 
 Together, these tasks showcase three distinct AI problem-solving
-paradigms ---\
-**search, optimization, and evolution --- implemented in Python.**
+paradigms:-
+**search, optimization, and evolution - implemented in Python.**
 
 ------------------------------------------------------------------------
 
 ## 📜 Author
 
-**Muhammad Talha Qureshi**\
-BSCS23122 -- Department of Computer Science\
+**Muhammad Talha Qureshi**
+BSCS23122 - Department of Computer Science\
 Artificial Intelligence
 
 ⭐ *If you like this work, don't forget to star the repository!* ⭐
