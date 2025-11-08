@@ -162,10 +162,10 @@ target word (e.g., `HELLOGA123`).
 
   Library   Purpose
   --------- ----------------------------------------------
-  pygame    GUI and graphics for Tic-Tac-Toe
-  random    Mutation, crossover, and selection in GA
-  string    Character set for chromosome generation
-  time      Execution time measurement for AI algorithms
+  - pygame    GUI and graphics for Tic-Tac-Toe
+  - random    Mutation, crossover, and selection in GA
+  - string    Character set for chromosome generation
+  - time      Execution time measurement for AI algorithms
 
 ------------------------------------------------------------------------
 
@@ -199,18 +199,18 @@ Displays a selection menu to run any of the three AI programs.
   -----------------------------------------------------------------------
   Concept                        Description
   ------------------------------ ----------------------------------------
-  Minimax                        Decision-making by exploring all
+  - Minimax                        Decision-making by exploring all
                                  possible moves
 
-  Alpha-Beta Pruning             Optimization of Minimax by pruning
+  - Alpha-Beta Pruning             Optimization of Minimax by pruning
                                  branches
 
-  Genetic Algorithm              Evolutionary approach for optimization
+  - Genetic Algorithm              Evolutionary approach for optimization
 
-  Fitness Function               Measures how close a candidate solution
+  - Fitness Function               Measures how close a candidate solution
                                  is
 
-  Backtracking                   Used in Minimax to revert states after
+  - Backtracking                   Used in Minimax to revert states after
                                  exploring a move
   -----------------------------------------------------------------------
 
