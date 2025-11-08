@@ -8,8 +8,8 @@ Each task demonstrates a fundamental **AI decision-making technique** — *Minim
 
 ## 🎯 **Project Overview**
 
-| **Task** | **Title** | **Technique Used** | **Description** |
-|-----------|------------|-------------------|-----------------|
+| **Task**   | **Title**  | **Technique Used** | **Description** |
+|----------- |------------|--------------------|-----------------|
 | **Task 1** | Tic-Tac-Toe (Minimax) | Minimax Algorithm | AI plays optimally by exploring all possible game states and choosing the move that maximizes its winning chances. |
 | **Task 2** | Tic-Tac-Toe (Alpha-Beta) | Minimax + Alpha-Beta Pruning | Optimized Minimax that reduces search space while giving identical results. |
 | **Task 3** | String Matching | Genetic Algorithm | AI evolves a random population of strings to match a target word using selection, crossover, and mutation. |
