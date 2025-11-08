@@ -1,239 +1,180 @@
-# AI Driven Tic Tac Toe By Alpha Beta Pruning & Minimax
+# AI DRIVEN TIC TAC TOE BY ALPHA BETA PRUNING AND MINIMAX 
+### *Implemented by Muhammad Talha Qureshi*  
 
-**Implemented by Muhammad Talha Qureshi**
+This repository contains **three Artificial Intelligence tasks** implemented in **Python** using **Pygame** and **Genetic Algorithm** concepts.  
+Each task demonstrates a fundamental **AI decision-making technique** — *Minimax*, *Alpha-Beta Pruning*, and *Genetic Algorithms*.
 
-This repository contains three Artificial Intelligence tasks implemented
-in Python using Pygame and Genetic Algorithms concepts.
-Each task demonstrates a core AI decision-making technique: **Minimax**,
-**Alpha-Beta Pruning**, and **Genetic Algorithms**.
+---
 
-------------------------------------------------------------------------
+## 🎯 **Project Overview**
 
-## 🎯 Project Overview
+| **Task** | **Title** | **Technique Used** | **Description** |
+|-----------|------------|-------------------|-----------------|
+| **Task 1** | Tic-Tac-Toe (Minimax) | Minimax Algorithm | AI plays optimally by exploring all possible game states and choosing the move that maximizes its winning chances. |
+| **Task 2** | Tic-Tac-Toe (Alpha-Beta) | Minimax + Alpha-Beta Pruning | Optimized Minimax that reduces search space while giving identical results. |
+| **Task 3** | String Matching | Genetic Algorithm | AI evolves a random population of strings to match a target word using selection, crossover, and mutation. |
 
-  ------------------------------------------------------------------------
-  Task       Title          Technique             Description
-  ---------- -------------- --------------------- ------------------------
-  Task 1     Tic-Tac-Toe    Minimax Algorithm     AI plays optimally by
-             (Minimax)                            exploring all possible
-                                                  game states and choosing
-                                                  the move that maximizes
-                                                  its winning chances.
+---
 
-  Task 2     Tic-Tac-Toe    Minimax + Alpha-Beta  An optimized version of
-             (Alpha-Beta)   Pruning               Task 1 that uses pruning
-                                                  to reduce search space
-                                                  and compares execution
-                                                  performance.
+## 🧩 **How to Run the Project**
 
-  Task 3     String         Genetic Algorithm     AI evolves a random
-             Matching                             population of strings to
-                                                  match a target word
-                                                  using selection,
-                                                  crossover, and mutation.
-  ------------------------------------------------------------------------
+### 🖥️ **Prerequisites**
+Make sure **Python (≥ 3.9)** and **Pygame** are installed:
 
-------------------------------------------------------------------------
-
-## 🧩 How to Run the Project
-
-### 🖥️ Prerequisites
-
-Make sure Python (≥ 3.9) and Pygame are installed:
-
-``` bash
+```bash
 pip install pygame
 ```
 
-### ▶️ Run the Main Menu
+### ▶️ **Run the Main Menu**
+Use the main menu file to choose between tasks:
 
-This file allows you to choose between all three tasks:
-
-``` bash
+```bash
 python bscs23122_AI_assm_2_.py
 ```
 
 You will see a menu like this:
 
-      AI Assignment 2 Menu
-    1. Tic-Tac-Toe using Minimax (Task 1)
-    2. Tic-Tac-Toe using Alpha-Beta Pruning (Task 2)
-    3. Genetic Algorithm for String Matching (Task 3)
-    4. Exit
+```
+AI Assignment 2 Menu
+1. Tic-Tac-Toe using Minimax (Task 1)
+2. Tic-Tac-Toe using Alpha-Beta Pruning (Task 2)
+3. Genetic Algorithm for String Matching (Task 3)
+4. Exit
+```
 
-Choose any option (1-3) to run that specific task.
+---
 
-------------------------------------------------------------------------
+## 🧠 **Task 1 — Tic-Tac-Toe using Minimax**
 
-## 🧠 Task 1 - Tic-Tac-Toe using Minimax
+### 🧩 **Concept**
+The **Minimax algorithm** simulates every possible move of both the player and AI before deciding the best possible move.  
 
-### 🧩 Concept
+It assumes:
+- The **AI (O)** plays optimally to maximize its score.  
+- The **Player (X)** plays optimally to minimize AI’s score.  
 
-The Minimax algorithm allows AI to simulate every possible game outcome
-before deciding its move.\
-It assumes: - The AI (O) plays optimally to maximize its score. - The
-Player (X) plays optimally to minimize AI's score.
+### ⚙️ **Working**
+1. Board represented as a 3×3 grid.  
+2. After each player move, AI recursively explores all possibilities.  
+3. Each state is evaluated with scores:  
 
-### ⚙️ Working
+| Result | Score |
+|---------|-------|
+| AI Win (O) | +10 |
+| Player Win (X) | -10 |
+| Draw | 0 |
 
--   The board is represented as a 3×3 grid.
--   After each player move, the AI explores all possible moves
-    recursively.
--   Each state is evaluated using the minimax score:
-    -   **Win for AI (O): +10**
-    -   **Win for Player (X): -10**
-    -   **Draw: 0**
--   AI chooses the move with the highest minimax value (best guaranteed
-    outcome).
+4. AI picks the move with the highest Minimax score.
 
-### 🔄 Example Workflow
+### 🔄 **Example Flow**
+1. Player places X.  
+2. AI simulates all possible O moves.  
+3. For each move, AI predicts the player's next possible response.  
+4. It backtracks through all outcomes and picks the move with the best final score.
 
-1.  Player places X.
-2.  AI simulates all possible responses for O.
-3.  For each possible O, AI also predicts how the player might respond
-    next.
-4.  This recursion continues until all possible game endings are
-    evaluated.
-5.  The best move (leading to the best final score) is selected.
+---
 
-------------------------------------------------------------------------
+## ⚡ **Task 2 — Tic-Tac-Toe using Alpha-Beta Pruning**
 
-## ⚡ Task 2 - Tic-Tac-Toe using Alpha-Beta Pruning
+### 🧩 **Concept**
+Alpha-Beta Pruning enhances Minimax by cutting off branches that won’t affect the final decision.  
+It **reduces computational cost** while ensuring the **same decision quality**.
 
-### 🧩 Concept
+### 🧮 **Performance Metrics**
+At the end, the program prints:
 
-This task extends Minimax with **Alpha-Beta Pruning**, a technique that
-cuts off unnecessary branches of the game tree.
-This makes the decision-making faster and more efficient while
-guaranteeing the same result as plain Minimax.
+| Metric | Description |
+|---------|--------------|
+| **AI Used** | Whether Minimax or Alpha-Beta |
+| **Nodes Explored** | Total recursive states visited |
+| **Max Depth** | Maximum recursion depth |
+| **Execution Time** | Time taken to make a move |
 
-### 🧮 Performance Metrics
+**Example Output:**  
+```
+Performance Stats
+AI used: Alpha-Beta Pruning
+Nodes Explored: 3
+Max Depth: 1
+Execution Time: 0.000024 seconds
+```
 
-At the end of the game, the program prints:
+---
 
--   AI type used
--   Nodes explored
--   Maximum recursion depth
--   Execution time
+## 🧬 **Task 3 — Genetic Algorithm for String Matching**
 
-**Example Output:**
+### 🧩 **Concept**
+A **Genetic Algorithm (GA)** mimics natural selection.  
+The goal: evolve random strings until they match a **target string** (e.g., `HELLOGA123`).
 
-    Performance Stats
-    AI used: Alpha-Beta Pruning
-    Nodes Explored: 3
-    Max Depth: 1
-    Execution Time: 0.000024 seconds
+### ⚙️ **Workflow**
+1. **Initialization** → Generate random population of strings.  
+2. **Fitness Calculation** → Count how many characters match the target.  
+3. **Selection** → Pick parents using tournament selection.  
+4. **Crossover** → Combine parents’ genes to create offspring.  
+5. **Mutation** → Randomly change a few characters to maintain diversity.  
+6. **Repeat** → Over generations, best solutions evolve.
 
-------------------------------------------------------------------------
+### 🧾 **Sample Output**
+```
+Generation 1: Max Fitness = 2, Average Fitness = 0.28
+...
+Generation 20: Max Fitness = 8, Average Fitness = 6.40
 
-## 🧬 Task 3 - Genetic Algorithm for String Matching
+Best match after 20 generations: HELLOLAW23
+Fitness: 8
+```
 
-### 🧩 Concept
+---
 
-A **Genetic Algorithm (GA)** mimics natural selection to solve
-optimization problems.
-In this case, the goal is to evolve random strings until they match a
-target word (e.g., `HELLOGA123`).
+## 🕹️ **Libraries Used**
 
-### ⚙️ Workflow
+| Library | Purpose |
+|----------|----------|
+| **pygame** | GUI for Tic-Tac-Toe |
+| **random** | Mutation, crossover, and selection in GA |
+| **string** | Character set for chromosome generation |
+| **time** | Measure algorithm execution time |
 
-1.  **Initialization:** Create a random population of strings.
-2.  **Fitness Calculation:** Compare each string with the target and
-    count matching characters.
-3.  **Selection:** Pick parent strings using tournament selection.
-4.  **Crossover:** Mix genes (characters) between parents to create
-    offspring.
-5.  **Mutation:** Randomly alter some characters to maintain diversity.
-6.  **Repeat:** Over generations, the population improves until a
-    near-perfect or perfect match appears.
+---
 
-### 🧾 Sample Output
+## 🔍 **Complete Workflow Summary**
 
-    Generation 1: Max Fitness = 2, Average Fitness = 0.28
-    ...
-    Generation 20: Max Fitness = 8, Average Fitness = 6.40
+| File | Description |
+|------|--------------|
+| **bscs23122_AI_assm_2_.py** | Displays main menu to choose between the 3 tasks |
+| **TicTacToe_minimax.py** | Implements pure Minimax algorithm |
+| **TicTacToe_alphabeta.py** | Implements Alpha-Beta optimized Minimax |
+| **StringMatching_GA.py** | Implements Genetic Algorithm for string evolution |
 
-    Best match after 20 generations: HELLOLAW23
-    Fitness: 8
+---
 
-------------------------------------------------------------------------
+## 📊 **Key AI Concepts Demonstrated**
 
-## 🕹️ Libraries Used
+| Concept | Description |
+|----------|--------------|
+| **Minimax** | Recursive decision-making that explores all possible game outcomes |
+| **Alpha-Beta Pruning** | Optimization that skips irrelevant branches in Minimax |
+| **Genetic Algorithm** | Evolutionary search for optimal solutions |
+| **Fitness Function** | Measures closeness to target solution |
+| **Backtracking** | Used to revert board states during Minimax recursion |
 
-  Library   Purpose
-  --------- ----------------------------------------------
-  - pygame    GUI and graphics for Tic-Tac-Toe
-  - random    Mutation, crossover, and selection in GA
-  - string    Character set for chromosome generation
-  - time      Execution time measurement for AI algorithms
+---
 
-------------------------------------------------------------------------
+## 🏁 **Conclusion**
 
-## 🔍 Complete Workflow Summary
+This project showcases the power of **AI search and optimization algorithms** using:
 
-### Main Menu (`bscs23122_AI_assm_2_.py`)
+- 🧩 Minimax & Alpha-Beta → Deterministic game-solving logic  
+- 🧬 Genetic Algorithm → Stochastic evolutionary optimization  
 
-Displays a selection menu to run any of the three AI programs.
+Together, these demonstrate three key **AI paradigms** — *Search*, *Optimization*, and *Evolution*.
 
-### Task 1 (Minimax)
+---
 
--   Explores all possible game states recursively.
--   Evaluates each outcome and backpropagates scores.
--   Selects the move that maximizes AI's winning chance.
+## 👨‍💻 **Author**
+**Muhammad Talha Qureshi**  
+*BSCS23122 – Department of Computer Science*  
+*Artificial Intelligence Assignment 2 (Fall 2025)*  
 
-### Task 2 (Alpha-Beta)
-
--   Improves Minimax by skipping irrelevant branches.
--   Displays node count, recursion depth, and time for analysis.
-
-### Task 3 (Genetic Algorithm)
-
--   Evolves random strings toward the target using crossover and
-    mutation.
--   Prints fitness evolution across generations.
-
-------------------------------------------------------------------------
-
-## 📊 Key AI Concepts Demonstrated
-
-  -----------------------------------------------------------------------
-  Concept                        Description
-  ------------------------------ ----------------------------------------
-  - Minimax                        Decision-making by exploring all
-                                 possible moves
-
-  - Alpha-Beta Pruning             Optimization of Minimax by pruning
-                                 branches
-
-  - Genetic Algorithm              Evolutionary approach for optimization
-
-  - Fitness Function               Measures how close a candidate solution
-                                 is
-
-  - Backtracking                   Used in Minimax to revert states after
-                                 exploring a move
-  -----------------------------------------------------------------------
-
-------------------------------------------------------------------------
-
-## 🏁 Conclusion
-
-This project demonstrates the power of search-based and evolutionary AI
-algorithms using:
-
--   **Minimax and Alpha-Beta for deterministic game logic.**
--   **Genetic Algorithms for stochastic optimization.**
-
-Together, these tasks showcase three distinct AI problem-solving
-paradigms:-
-**search, optimization, and evolution - implemented in Python.**
-
-------------------------------------------------------------------------
-
-## 📜 Author
-
-**Muhammad Talha Qureshi**
-BSCS23122 - Department of Computer Science\
-Artificial Intelligence
-
-⭐ *If you like this work, don't forget to star the repository!* ⭐
+⭐ *If you found this project helpful, don’t forget to star the repository!* ⭐  
