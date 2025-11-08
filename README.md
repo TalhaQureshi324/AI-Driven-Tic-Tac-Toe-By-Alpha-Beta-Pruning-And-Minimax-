@@ -175,6 +175,6 @@ Together, these demonstrate three key **AI paradigms** — *Search*, *Optimizati
 ## 👨‍💻 **Author**
 **Muhammad Talha Qureshi**  
 *BSCS23122 – Department of Computer Science*  
-*Artificial Intelligence Assignment 2 (Fall 2025)*  
+*Artificial Intelligence*  
 
 ⭐ *If you found this project helpful, don’t forget to star the repository!* ⭐  
